@@ -1,0 +1,249 @@
+body {
+	font-family:  sans-serif;   /*mudar fonte, se quiser uma da internete coloque assim "font-family: fonte que vc quer, sans-serif;" nao esqueca de adiciinar extensaono html*/
+}
+
+h1, h2, h3{
+	font-family: Asap, sans-serif;
+	color: #000000; /*adicinar cor a letra*/
+}
+
+.botao{
+	color: #FFFFFF;
+	text-decoration: none; /*retira o hiperlink*/
+	padding: 10px 30px; /*posição do botão*/
+	background-color: #191970;/*cor do fundo*/
+	font-size: .9em;/*tamanho do botao*/
+	border-radius: 3px;/*curvar lateral do botao*/
+}
+
+nav {
+	display: flex; /*alinha os itens"sobre, catalogo,rvendedora e contato " com o atelie kasue*/
+	align-items: center;/*alinha o item atelie kasue na horizontal*/
+    background-color: #191970;  
+}
+
+nav > a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: 800;/*espessura do "atelie kasue"*/
+	font-size: 32px;/*tamanho da letra do atelie kasue*/
+	font-family: Yellowtail,serif; 
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	width: 100%;
+}
+
+nav ul li {
+	text-align: center;/*alinha os textos no centro */
+	width: 100%
+}
+
+nav ul li a {
+	display: inline-block;
+	padding: 10px 0;
+	width: 100%
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*background-image: url("../img/foto que eu quero");   adiciona foto no fundo*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 20px;
+}
+
+header h1{
+	color: #191970;
+}
+
+header p{
+	margin-bottom: 2em;/*espacamento entre o  paragrafo e o botao */
+	color: #191970
+}
+
+#sobre{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 10px 10px 20px 20px;
+	background-color: #191970;
+	color: #FFFFFF;
+}
+
+#sobre h2{
+	color: #FFFFFF
+}
+
+#sobre p{
+	margin-bottom: 2.5em;
+	max-width: 1000px;
+}
+
+#sobre .botao{
+	background-color: #f1f1f1;
+	color: #1c1c1c
+}
+
+#catalogo{
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding-top: 20px;
+
+}
+
+#catalogo ul{
+	display: flex;
+	padding: 0px;
+}
+
+
+#catalogo img {
+
+	max-width: 60%; /*tamanho maximo que a foto vai ter*/ 
+	padding-top: 10px;
+
+}
+
+#pano{
+	width: 47%; /*tamanho que eu quero ta foto*/
+}
+
+#catalogo h3{
+	margin-bottom: 30px;/*espacamento inferior da margem*/
+}
+
+#revendedora{
+	text-align: center;
+	padding: 20px;
+	background-color: #191970;
+	color: #FFFFFF;
+}
+#revendedora h2{
+	color: #FFFFFF;
+}
+
+#contato {
+	display:flex; 
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding-top: 10px;
+
+}
+
+#contato ul{
+	display: flex;
+	text-align: center;
+	padding: 0;
+}
+
+#contato img{
+	width: 20%;
+	align-items: center;
+}
+#contato p{
+	margin-top: 0px;
+}
+
+#contato h2{
+	color: #000000;
+	text-align: center;
+}
+
+#contato ul div p a{
+	color: #000000;
+}
+#telefone{
+	max-width: 800px;
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+	background-color:#191970;
+	color: #FFFFFF;
+	padding-top: 30px;
+}
+
+footer a{
+	text-decoration: none;
+	color: #FFFFFF
+}
+
+footer p{
+	text-decoration: none;
+}
+
+@media screen and (min-width: 768px){ /*importate para a padronizacao do site*/
+
+	nav{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	nav ul {
+		flex-direction: row; /*faz o cabecario deitar*/
+		width: 70%
+	}
+
+	header {
+		height: 600px;
+		height: 60vh; /*comprimento da cabeca do site "parte branca"*/
+		justify-content: center; /*centraliza tudo do meio da parte branca*/
+	}
+
+	#sobre {
+		height: 250px;
+		height: 30vh;
+		justify-content: center;
+		min-height: 250px;
+	}
+
+	#catalogo{
+		flex-direction: row;
+		flex-wrap: wrap; /*coloca o "catalogo acima das fotos"*/
+		align-items: flex-start;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	#catalogo h2{
+		text-align: center;
+		width: 100%;
+	}
+
+	#catalogo div{
+		flex-grow: 1; /*padroniza as imagens*/
+		flex-basis: 150px; /*diminui a primeira imagem*/
+		padding: 0 10px;
+	}
+
+	#contato{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	#contato h2, #contato p{
+		width: 100%;
+	}
+
+}
